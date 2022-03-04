@@ -12,8 +12,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  my_first_job:
-    name: My first job
+  RASA_CI:
+    name: RASA Continuous integration
     runs-on: ubuntu-latest
     steps:
       # Checks-out GitHub repository
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Run rasa train and rasa test
-      - name: My first step
+      - name: Train and test RASA model
         uses: RasaHQ/rasa-train-test-gha@main
         with:
           test_type: all
