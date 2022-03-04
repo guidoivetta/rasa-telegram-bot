@@ -1,6 +1,6 @@
 # Proyecto de trabajo especial
 
-`FAMAF` `UNC`
+`FAMAF` `Universidad Nacional de Córdoba`
 
 ## Aprendizaje Automático aplicado a recomendaciones de huerta en climas extremos
 
