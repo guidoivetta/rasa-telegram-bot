@@ -25,18 +25,10 @@ jobs:
     steps:
       - run: |
           python3 -m venv venv
+          ls
+          cd ..
+          ls
           source venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
-      - uses: actions/checkout@v1
-      - name: Rasa Train and Test GitHub Action
-        uses: RasaHQ/rasa-train-test-gha@main
-        with:
-          requirements_file: requirements.txt
-          data_validate: false
-          rasa_train: true
-          cross_validation: false
-          rasa_test: true
-          test_type: all
-          publish_summary: true
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+
