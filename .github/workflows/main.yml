@@ -24,5 +24,7 @@ jobs:
       - name: My first step
         uses: RasaHQ/rasa-train-test-gha@main
         with:
-          test_type: nlu
+          test_type: all
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_summary: true
 
