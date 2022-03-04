@@ -25,9 +25,7 @@ jobs:
     steps:
       - run: |
           python3 -m venv venv
-          ls
-          cd ..
-          ls
+          ls -a
           source venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
