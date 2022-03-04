@@ -1,0 +1,40 @@
+version: "2.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hola
+      - cómo estás?
+
+  - intent: goodbye
+    examples: |
+      - chau
+      - adiós
+
+  - intent: detect_disease
+    examples: |
+      - mi planta está enferma?
+      - tiene enfermedades?
+
+  - intent: image_url
+    examples: |
+      - https://api.telegram.org/file/bot
+
+  # - intent: affirm
+  #   examples: |
+  #       - yes
+  #       - y
+  #       - indeed
+  #       - of course
+  #       - that sounds good
+  #       - correct
+
+  # - intent: deny
+  #   examples: |
+  #       - no
+  #       - n
+  #       - never
+  #       - I don't think so
+  #       - don't like that
+  #       - no way
+  #       - not really

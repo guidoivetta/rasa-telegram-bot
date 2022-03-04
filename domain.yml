@@ -1,0 +1,28 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - detect_disease
+  - image_url
+
+entities:
+  - url
+
+responses:
+  utter_greet:
+    - text: "Hola! Cómo estás?"
+  utter_no:
+    - text: "No, tu planta está sana!"
+  utter_provide_photo:
+    - text: "Me podrías dar una foto de tu planta?"
+  utter_detecting_disease:
+    - text: "Detectando enfermedades..."
+
+
+actions:
+  - action_detect_disease
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

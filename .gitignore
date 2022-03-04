@@ -1,0 +1,4 @@
+credentials.yml
+venv
+actions/photos/*
+models/*
