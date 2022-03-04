@@ -25,11 +25,11 @@ pipeline:
     threshold: 0.3
     ambiguity_threshold: 0.1
     pipeline:
-  - name: "DucklingEntityExtractor"
-    # url of the running duckling server
-    url: "http://localhost:8000"
-    # dimensions to extract
-    dimensions: ["url"]
+  # - name: "DucklingEntityExtractor"
+  #   # url of the running duckling server
+  #   url: "http://localhost:8000"
+  #   # dimensions to extract
+  #   dimensions: ["url"]
     # # allows you to configure the locale, by default the language is
     # # used
     # locale: "de_DE"
