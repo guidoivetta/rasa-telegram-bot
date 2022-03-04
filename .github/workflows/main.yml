@@ -15,6 +15,9 @@ jobs:
   training-testing:
     name: Training and Testing
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6.15]
     steps:
       - uses: actions/checkout@v1
       - name: Rasa Train and Test GitHub Action
@@ -28,9 +31,3 @@ jobs:
           test_type: all
           publish_summary: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload model
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@master
-        with:
-          name: model
-          path: models
