@@ -45,3 +45,18 @@ class ActionDetectDisease(Action):
             dispatcher.utter_message(text=prediction)
 
         return []
+
+
+class ActionProvideWaterFrequency(Action):
+
+    def name(self) -> Text:
+        return "action_provide_water_frequency"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+
+        plant_type = tracker.get_slot("plant_type")
+        dispatcher.utter_message(text=plant_type)
+
+        return []

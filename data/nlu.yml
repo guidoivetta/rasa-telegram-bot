@@ -1,6 +1,14 @@
 version: "2.0"
 
 nlu:
+  - intent: start
+    examples: |
+      - /start
+
+  - intent: help
+    examples: |
+      - /ayuda
+
   - intent: greet
     examples: |
       - hola
@@ -19,3 +27,14 @@ nlu:
   - intent: image_url
     examples: |
       - https://api.telegram.org/file/bot
+
+  - intent: detect_water_frequency
+    examples: |
+      - cada cuánto tengo que regar mi planta?
+      - riego mi planta?
+
+  - intent: inform_plant_type
+    examples: |
+      - [tomate](plant_type)
+      - [zanahoria](plant_type)
+      - [pimiento](plant_type)

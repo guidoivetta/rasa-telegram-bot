@@ -1,13 +1,32 @@
 version: "2.0"
 
 stories:
-  - story: disease_classification
+  - story: onboarding
+    steps:
+      - intent: start
+      - action: utter_onboarding
+  
+  - story: help
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - story: greeting
     steps:
       - intent: greet
       - action: utter_greet
+
+  - story: water_frequency
+    steps:
+      - intent: detect_water_frequency
+      - action: utter_provide_plant_type
+      - intent: inform_plant_type
+      - action: action_provide_water_frequency
+
+  - story: disease_classification
+    steps:
       - intent: detect_disease
       - action: utter_provide_photo
       - intent: image_url
       - action: utter_detecting_disease
       - action: action_detect_disease
-
