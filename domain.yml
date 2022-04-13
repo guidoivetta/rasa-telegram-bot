@@ -24,17 +24,18 @@ slots:
 
 responses:
   utter_onboarding:
-    - text: "Hola! Soy _ bot.\n\
-        Puedo dar recomendaciones de riego, y reconocer posibles enfermedades que tenga tus plantas, simplemente preguntame lo que quieras buscar.\n\n\
-        Ejemplos:\n\
-        Mi planta está enferma?\n\
-        Cada cuánto tengo que regar una planta de tomate?\n\n\
+    - text: "Hola! Soy _ bot.\
+        Puedo dar recomendaciones de riego, y reconocer posibles enfermedades que tenga tus plantas, simplemente preguntame lo que quieras buscar.\
+        Ejemplos:\
+        Mi planta está enferma?\
+        Cada cuánto tengo que regar una planta de tomate?\
         Si necesitás ayuda, escribí /help"
   utter_help:
-    - text: "Puedo dar recomendaciones de riego, y reconocer posibles enfermedades que tenga tus plantas, simplemente preguntame lo que quieras buscar.\n\n\
-        Ejemplos:\n\
-        Mi planta está enferma?\n\
-        Cada cuánto tengo que regar una planta de tomate?\n\n\
+    - text:
+        "Puedo dar recomendaciones de riego, y reconocer posibles enfermedades que tenga tus plantas, simplemente preguntame lo que quieras buscar.\
+        Ejemplos:\
+        Mi planta está enferma?\
+        Cada cuánto tengo que regar una planta de tomate?\
         Si necesitás ayuda, escribí /help"
   utter_greet:
     - text: "Hola! Cómo estás?"
