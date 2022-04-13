@@ -1,7 +1,7 @@
 credentials.yml
 venv
 actions/photos/*
-actions/pycache/*
+actions/__pycache__/*
 models/*
 results
 story_graph.dot

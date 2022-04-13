@@ -1,27 +1,57 @@
 version: "2.0"
 
 intents:
+  - start
+  - help
   - greet
   - goodbye
   - detect_disease
   - image_url
+  - detect_water_frequency
+  - inform_plant_type
 
 entities:
   - url
+  - plant_type
+
+slots:
+  plant_type:
+    type: categorical
+    values:
+      - tomate
+      - zanahoria
+      - pimiento
 
 responses:
+  utter_onboarding:
+    - text: "Hola! Soy _ bot.\n\
+        Puedo dar recomendaciones de riego, y reconocer posibles enfermedades que tenga tus plantas, simplemente preguntame lo que quieras buscar.\n\n\
+        Ejemplos:\n\
+        Mi planta está enferma?\n\
+        Cada cuánto tengo que regar una planta de tomate?\n\n\
+        Si necesitás ayuda, escribí /help"
+  utter_help:
+    - text:
+        "Puedo dar recomendaciones de riego, y reconocer posibles enfermedades que tenga tus plantas, simplemente preguntame lo que quieras buscar.\n\n\
+        Ejemplos:\n\
+        Mi planta está enferma?\n\
+        Cada cuánto tengo que regar una planta de tomate?\n\n\
+        Si necesitás ayuda, escribí /help"
   utter_greet:
     - text: "Hola! Cómo estás?"
+    - text: "Hola! En qué te puedo ayudar?"
   utter_no:
     - text: "No, tu planta está sana!"
   utter_provide_photo:
     - text: "Me podrías dar una foto de tu planta?"
   utter_detecting_disease:
     - text: "Detectando enfermedades..."
-
+  utter_provide_plant_type:
+    - text: "Me podrías decir la especie de tu planta?"
 
 actions:
   - action_detect_disease
+  - action_provide_water_frequency
 
 session_config:
   session_expiration_time: 60
