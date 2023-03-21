@@ -99,17 +99,17 @@ rules:
       - action: action_provide_composting_general_info
 
   # AID KIT RULES -------------------------------------------------------------
-  - rule: slotted_waste_harm_info
+  - rule: homemade_products
     steps:
       - intent: provide_homemade_products
       - action: utter_provide_homemade_products
 
-  - rule: slotted_waste_harm_info
+  - rule: commercial_products
     steps:
       - intent: provide_commercial_products
       - action: utter_provide_commercial_products
 
-  - rule: slotted_waste_harm_info
+  - rule: get_product_info
     steps:
       - intent: button_set_product_name
       - action: action_provide_aid_kit_products
