@@ -11,9 +11,9 @@ stories:
       - user: |
           mi planta está enferma?
         intent: detect_disease
-      - action: utter_provide_photo
+      - action: utter_provide_plant_photo
       - user: |
           https://api.telegram.org/file/bot
         intent: image_url
       - action: utter_detecting_disease
-      - action: action_detect_disease
+      # - action: action_detect_disease

@@ -1,32 +1,89 @@
 version: "2.0"
 
 stories:
-  - story: onboarding
+  # PLANT STORIES -------------------------------------------------------------
+  - story: identify_plant_by_photo_slot_found
     steps:
-      - intent: start
-      - action: utter_onboarding
-  
-  - story: help
-    steps:
-      - intent: help
-      - action: utter_help
-
-  - story: greeting
-    steps:
-      - intent: greet
-      - action: utter_greet
-
-  - story: water_frequency
-    steps:
-      - intent: detect_water_frequency
-      - action: utter_provide_plant_type
-      - intent: inform_plant_type
-      - action: action_provide_water_frequency
-
-  - story: disease_classification
-    steps:
-      - intent: detect_disease
-      - action: utter_provide_photo
+      - intent: identify_plant_photo
+      - action: utter_provide_plant_photo
       - intent: image_url
-      - action: utter_detecting_disease
-      - action: action_detect_disease
+      - action: utter_identifying_plant
+      - action: action_identify_plant
+      - slot_was_set:
+        - plant_name
+      - action: utter_provide_slotted_plant_features
+
+  - story: identify_plant_by_photo_slot_not_found
+    steps:
+      - intent: identify_plant_photo
+      - action: utter_provide_plant_photo
+      - intent: image_url
+      - action: utter_identifying_plant
+      - action: action_identify_plant
+      - slot_was_set:
+        - plant_name: planta_desconocida
+      - action: utter_no_info_about_this_plant
+      - action: utter_back_to_main_menu
+
+  - story: identify_plant_by_text_recognized
+    steps:
+      - intent: identify_plant_text
+      - action: utter_provide_plant_name
+      - intent: inform_plant_name
+      - action: utter_provide_slotted_plant_features
+
+  - story: identify_plant_by_text_unrecognized
+    steps:
+      - intent: identify_plant_text
+      - action: utter_provide_plant_name
+      - intent: inform_plant_name
+      - slot_was_set:
+          - plant_name: __other__
+      - action: utter_plant_name_not_recognized
+      - action: utter_choose_plant_name
+      - intent: button_set_plant_name
+      - action: utter_provide_slotted_plant_features
+
+  # INSECT STORIES ------------------------------------------------------------
+  - story: identify_insect
+    steps:
+      - intent: provide_possible_insect_features
+      - action: utter_provide_insect_id
+      - intent: identify_insect_photo
+      - action: utter_provide_insect_photo
+      - intent: image_url
+      - action: utter_identifying_insect
+      - action: action_identify_insect
+      - action: utter_provide_slotted_insect_features
+
+  - story: identify_insect_by_text_unrecognized
+    steps:
+      - intent: provide_possible_insect_features
+      - action: utter_provide_insect_id
+      - intent: identify_insect_list
+      - action: utter_choose_insect_name
+      - intent: button_set_insect_name
+      - action: utter_provide_slotted_insect_features
+
+  # WASTE STORIES ------------------------------------------------------------
+  - story: waste_classification_photo
+    steps:
+      - intent: provide_possible_waste_features
+      - action: utter_provide_unslotted_waste_features
+      - intent: classify_waste_photo
+      - action: utter_provide_waste_photo
+      - intent: image_url
+      - action: utter_identifying_waste
+      - action: action_identify_waste
+      - action: utter_provide_unslotted_waste_features
+  
+  # AID KIT STORIES -----------------------------------------------------------
+  - story: provide_possible_aid_kit_features
+    steps:
+      - intent: provide_possible_aid_kit_features
+      - action: utter_provide_aid_kit_features
+      # - intent: provide_homemade_products
+      # - action: utter_provide_homemade_products
+      # - intent: button_set_product_name
+      # - action: action_provide_aid_kit_products
+

@@ -19,6 +19,29 @@ nlu:
       - chau
       - adiós
 
+  - intent: thanks
+    examples: |
+      - gracias
+      - muchas gracias
+      - muchas gracias!
+      - genial, gracias
+
+  - intent: affirm
+    examples: |
+      - si
+      - correcto
+
+  - intent: deny
+    examples: |
+      - no
+      - está mal
+      - chau
+      - no me molestes
+      - tonto
+      - malo
+      - estúpido
+      - salí de acá
+
   - intent: detect_disease
     examples: |
       - mi planta está enferma?
@@ -28,13 +51,107 @@ nlu:
     examples: |
       - https://api.telegram.org/file/bot
 
-  - intent: detect_water_frequency
+  - intent: inform_plant_name
     examples: |
-      - cada cuánto tengo que regar mi planta?
-      - riego mi planta?
-
-  - intent: inform_plant_type
-    examples: |
-      - [tomate](plant_type)
-      - [zanahoria](plant_type)
-      - [pimiento](plant_type)
+      - [acelga](plant_name)
+      - [Acelga](plant_name)
+      - [achicoria](plant_name)
+      - [Achicoria](plant_name)
+      - [radicheta](plant_name)
+      - [Radicheta](plant_name)
+      - [ajo](plant_name)
+      - [ajo](plant_name)
+      - [albahaca](plant_name)
+      - [Albahaca](plant_name)
+      - [apio](plant_name)
+      - [Apio](plant_name)
+      - [arvejas](plant_name)
+      - [Arvejas](plant_name)
+      - [batata](plant_name)
+      - [Batata](plant_name)
+      - [berenjena](plant_name)
+      - [Berenjena](plant_name)
+      - [brócoli](plant_name)
+      - [Brócoli](plant_name)
+      - [calabaza](plant_name)
+      - [Calabaza](plant_name)
+      - [zapallo](plant_name)
+      - [Zapallo](plant_name)
+      - [caléndula](plant_name)
+      - [Caléndula](plant_name)
+      - [calendula](plant_name)
+      - [Calendula](plant_name)
+      - [cebolla](plant_name)
+      - [Cebolla](plant_name)
+      - [cebolla de verdeo](plant_name)
+      - [Cebolla de verdeo](plant_name)
+      - [cebollita de verdeo](plant_name)
+      - [Cebollita de verdeo](plant_name)
+      - [cebollino](plant_name)
+      - [Cebollino](plant_name)
+      - [ciboulet](plant_name)
+      - [Ciboulet](plant_name)
+      - [choclo](plant_name)
+      - [Choclo](plant_name)
+      - [cilantro](plant_name)
+      - [Cilantro](plant_name)
+      - [coliflor](plant_name)
+      - [Coliflor](plant_name)
+      - [escarola](plant_name)
+      - [Escarola](plant_name)
+      - [espinaca](plant_name)
+      - [Espinaca](plant_name)
+      - [frambuesa](plant_name)
+      - [Frambuesa](plant_name)
+      - [frutilla](plant_name)
+      - [Frutilla](plant_name)
+      - [haba](plant_name)
+      - [Haba](plant_name)
+      - [kale](plant_name)
+      - [Kale](plant_name)
+      - [lechuga](plant_name)
+      - [Lechuga](plant_name)
+      - [mora](plant_name)
+      - [Mora](plant_name)
+      - [nabo](plant_name)
+      - [Nabo](plant_name)
+      - [papa](plant_name)
+      - [Papa](plant_name)
+      - [pepino](plant_name)
+      - [Pepino](plant_name)
+      - [perejil](plant_name)
+      - [Perejil](plant_name)
+      - [pimiento](plant_name)
+      - [Pimiento](plant_name)
+      - [poroto](plant_name)
+      - [Poroto](plant_name)
+      - [chaucha](plant_name)
+      - [Chaucha](plant_name)
+      - [puerro](plant_name)
+      - [Puerro](plant_name)
+      - [quinoa](plant_name)
+      - [Quinoa](plant_name)
+      - [rabanito](plant_name)
+      - [Rabanito](plant_name)
+      - [remolacha](plant_name)
+      - [Remolacha](plant_name)
+      - [repollito de bruselas](plant_name)
+      - [Repollito de bruselas](plant_name)
+      - [repollo morado](plant_name)
+      - [Repollo morado](plant_name)
+      - [repollo blanco](plant_name)
+      - [Repollo blanco](plant_name)
+      - [repollo verde](plant_name)
+      - [Repollo verde](plant_name)
+      - [rúcula](plant_name)
+      - [Rúcula](plant_name)
+      - [rucula](plant_name)
+      - [Rucula](plant_name)
+      - [tomate](plant_name)
+      - [Tomate](plant_name)
+      - [topinambur](plant_name)
+      - [Topinambur](plant_name)
+      - [zanahoria](plant_name)
+      - [Zanahoria](plant_name)
+      - [zapallito de tronco](plant_name)
+      - [Zapallito de tronco](plant_name)

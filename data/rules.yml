@@ -1,4 +1,121 @@
 version: "2.0"
 
 rules:
+  - rule: onboarding
+    steps:
+      - intent: start
+      - action: utter_onboarding
 
+  - rule: help
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - rule: greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_main_menu
+
+  - rule: thanks
+    steps:
+      - intent: thanks
+      - action: utter_thanks
+      - action: utter_main_menu
+
+  - rule: back_to_main
+    steps:
+      - intent: back_to_main_menu
+      - action: utter_main_menu
+
+  # PLANT RULES ---------------------------------------------------------------
+  - rule: provide_possible_plant_features
+    steps:
+      - intent: provide_possible_plant_features
+      - action: utter_provide_plant_id
+  
+  # - rule: identify_plant_by_photo_slot_found
+  #   steps:
+  #     - intent: identify_plant_photo
+  #     - action: utter_provide_plant_photo
+  #     - intent: image_url
+  #     - action: utter_identifying_plant
+  #     - action: action_identify_plant
+  #     - slot_was_set:
+  #       - plant_name
+  #     - action: utter_provide_slotted_plant_features
+
+  # - rule: identify_plant_by_photo_slot_not_found
+  #   steps:
+  #     - intent: identify_plant_photo
+  #     - action: utter_provide_plant_photo
+  #     - intent: image_url
+  #     - action: utter_identifying_plant
+  #     - action: action_identify_plant
+  #     - slot_was_set:
+  #       - plant_name: planta_desconocida
+  #     - action: utter_back_to_main_menu
+  
+  - rule: slotted_plant_recipe
+    steps:
+      - intent: provide_slotted_plant_recipe
+      - action: action_provide_slotted_plant_recipe
+
+  - rule: slotted_plant_nutritional_info
+    steps:
+      - intent: provide_slotted_plant_nutritional_info
+      - action: action_provide_slotted_plant_nutritional_info
+
+  - rule: slotted_plant_nurture_info
+    steps:
+      - intent: provide_slotted_plant_nurture_info
+      - action: action_provide_slotted_plant_nurture_info
+
+  # INSECT RULES --------------------------------------------------------------
+  - rule: slotted_insect_general_info
+    steps:
+      - intent: provide_slotted_insect_general_info
+      - action: action_provide_slotted_insect_general_info
+
+  - rule: slotted_insect_harm_info
+    steps:
+      - intent: provide_slotted_insect_harm_info
+      - action: action_provide_slotted_insect_harm_info
+
+  - rule: slotted_insect_prevent_info
+    steps:
+      - intent: provide_slotted_insect_prevent_info
+      - action: action_provide_slotted_insect_prevent_info
+
+  # WASTE RULES ---------------------------------------------------------------
+  - rule: slotted_waste_general_info
+    steps:
+      - intent: provide_compost_problems
+      - action: action_provide_compost_problems
+
+  - rule: slotted_waste_harm_info
+    steps:
+      - intent: provide_composting_general_info
+      - action: action_provide_composting_general_info
+
+  # AID KIT RULES -------------------------------------------------------------
+  - rule: slotted_waste_harm_info
+    steps:
+      - intent: provide_homemade_products
+      - action: utter_provide_homemade_products
+
+  - rule: slotted_waste_harm_info
+    steps:
+      - intent: provide_commercial_products
+      - action: utter_provide_commercial_products
+
+  - rule: slotted_waste_harm_info
+    steps:
+      - intent: button_set_product_name
+      - action: action_provide_aid_kit_products
+
+  # GENERIC RULES -------------------------------------------------------------
+  - rule: all_other_intents
+    steps:
+      - intent: deny
+      - action: utter_main_menu
