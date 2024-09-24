@@ -155,6 +155,8 @@ intents:
 entities:
   - url
   - plant_name
+  - insect_name
+  - product_name
 
 slots:
   plant_name:
@@ -274,6 +276,10 @@ slots:
       - pulgón
       - pulgon
       - tijereta
+      - mosca_blanca
+      - sirfido
+      - vaquita
+      - cochinilla
   product_name:
     type: categorical
     values:
@@ -387,7 +393,7 @@ responses:
         - payload: /button_set_plant_name{{"plant_name":"radicheta"}}
           title: radicheta
         - payload: /button_set_plant_name{{"plant_name":"ajo"}}
-          title: ajo 🧄
+          title: ajo
         - payload: /button_set_plant_name{{"plant_name":"albahaca"}}
           title: albahaca
         - payload: /button_set_plant_name{{"plant_name":"apio"}}
@@ -397,15 +403,15 @@ responses:
         - payload: /button_set_plant_name{{"plant_name":"batata"}}
           title: batata
         - payload: /button_set_plant_name{{"plant_name":"berenjena"}}
-          title: berenjena 🍆
+          title: berenjena
         - payload: /button_set_plant_name{{"plant_name":"brócoli"}}
-          title: brócoli 🥦
+          title: brócoli
         - payload: /button_set_plant_name{{"plant_name":"calabaza"}}
-          title: calabaza 🎃
+          title: calabaza
         - payload: /button_set_plant_name{{"plant_name":"caléndula"}}
           title: caléndula
         - payload: /button_set_plant_name{{"plant_name":"cebolla"}}
-          title: cebolla 🧅
+          title: cebolla
         - payload: /button_set_plant_name{{"plant_name":"cebolla de verdeo"}}
           title: cebolla de verdeo
         - payload: /button_set_plant_name{{"plant_name":"cebollino"}}
@@ -413,7 +419,7 @@ responses:
         - payload: /button_set_plant_name{{"plant_name":"ciboulet"}}
           title: ciboulet
         - payload: /button_set_plant_name{{"plant_name":"choclo"}}
-          title: choclo 🌽
+          title: choclo
         - payload: /button_set_plant_name{{"plant_name":"cilantro"}}
           title: cilantro
         - payload: /button_set_plant_name{{"plant_name":"coliflor"}}
@@ -425,25 +431,25 @@ responses:
         - payload: /button_set_plant_name{{"plant_name":"frambuesa"}}
           title: frambuesa
         - payload: /button_set_plant_name{{"plant_name":"frutilla"}}
-          title: frutilla 🍓
+          title: frutilla
         - payload: /button_set_plant_name{{"plant_name":"haba"}}
           title: haba
         - payload: /button_set_plant_name{{"plant_name":"kale"}}
           title: kale
         - payload: /button_set_plant_name{{"plant_name":"lechuga"}}
-          title: lechuga 🥬
+          title: lechuga
         - payload: /button_set_plant_name{{"plant_name":"mora"}}
-          title: mora 🫐
+          title: mora
         - payload: /button_set_plant_name{{"plant_name":"nabo"}}
           title: nabo
         - payload: /button_set_plant_name{{"plant_name":"papa"}}
-          title: papa 🥔
+          title: papa
         - payload: /button_set_plant_name{{"plant_name":"pepino"}}
-          title: pepino 🥒
+          title: pepino
         - payload: /button_set_plant_name{{"plant_name":"perejil"}}
           title: perejil
         - payload: /button_set_plant_name{{"plant_name":"pimiento"}}
-          title: pimiento 🫑
+          title: pimiento
         - payload: /button_set_plant_name{{"plant_name":"poroto"}}
           title: poroto
         - payload: /button_set_plant_name{{"plant_name":"chaucha"}}
@@ -467,11 +473,11 @@ responses:
         - payload: /button_set_plant_name{{"plant_name":"rúcula"}}
           title: rúcula
         - payload: /button_set_plant_name{{"plant_name":"tomate"}}
-          title: tomate 🍅
+          title: tomate
         - payload: /button_set_plant_name{{"plant_name":"topinambur"}}
           title: topinambur
         - payload: /button_set_plant_name{{"plant_name":"zanahoria"}}
-          title: zanahoria 🥕
+          title: zanahoria
         - payload: /button_set_plant_name{{"plant_name":"zapallito de tronco"}}
           title: zapallito de tronco
         - payload: /button_set_plant_name{{"plant_name":"zapallo"}}
@@ -507,7 +513,7 @@ responses:
 
   utter_provide_insect_photo:
     - text: "Puedo identificar fotos de seis insectos comunes a las huertas de la zona (pulgón, pilme, oruga, tijereta, babosa y babosita del peral).\n\n\
-      Con más datos en el futuro voy a poder identificar.\n\n\
+      Con más datos en el futuro voy a poder identificar aún más.\n\n\
       ¿Me podrías enviar una foto del insecto?"
 
   utter_provide_slotted_insect_features:
@@ -517,7 +523,7 @@ responses:
         - payload: /provide_slotted_insect_harm_info
           title: Daños de {insect_name} en la huertas
         - payload: /provide_slotted_insect_prevent_info
-          title: Prevención de {insect_name}
+          title: Prevención/Atracción de {insect_name}
         - payload: /back_to_main_menu{{"plant_name":null, "insect_name":null}}
           title: Volver al menú principal
       button_type: vertical
@@ -538,16 +544,24 @@ responses:
           title: Babosa
         - payload: /button_set_insect_name{{"insect_name":"babosita del peral"}}
           title: Babosita del peral
+        - payload: /button_set_insect_name{{"insect_name":"cochinilla"}}
+          title: Cochinilla
         - payload: /button_set_insect_name{{"insect_name":"hormiga"}}
           title: Hormiga
+        - payload: /button_set_insect_name{{"insect_name":"mosca_blanca"}}
+          title: Mosca Blanca
         - payload: /button_set_insect_name{{"insect_name":"oruga"}}
           title: Oruga
         - payload: /button_set_insect_name{{"insect_name":"pilme"}}
           title: Pilme
-        - payload: /button_set_insect_name{{"insect_name":"pulgón"}}
+        - payload: /button_set_insect_name{{"insect_name":"pulgon"}}
           title: Pulgón
+        - payload: /button_set_insect_name{{"insect_name":"sirfido"}}
+          title: Sírfido
         - payload: /button_set_insect_name{{"insect_name":"tijereta"}}
           title: Tijereta
+        - payload: /button_set_insect_name{{"insect_name":"vaquita"}}
+          title: Vaquita de San Antonio
         - payload: /back_to_main_menu{{"plant_name":null, "insect_name":null}}
           title: Volver al menú principal
       button_type: vertical
